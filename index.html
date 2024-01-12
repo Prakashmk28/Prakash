@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script>
+        function download(file, text) {
+ 
+ //creating an invisible element
+
+ var element = document.createElement('a');
+ element.setAttribute('href',
+     'data:text/plain;charset=utf-8, '
+     + encodeURIComponent(text));
+ element.setAttribute('download', file);
+ document.body.appendChild(element);
+ element.click();
+
+ document.body.removeChild(element);
+}
+
+// Start file download.
+
+document.getElementById("btn")
+ .addEventListener("click", function () {
+     var text = 
+             document.getElementById("text").value;
+     var filename = "GFG.txt";
+
+     download(filename, text);
+ }, false);
+
+    </script>
+</head>
+<body>
+    <div class="grid-item">
+        <center>
+        <button class="btn-nav">HOME</button>
+        <button class="btn-nav">ABOUT</button>
+        <button class="btn-nav">PROJECTS</button>
+        <button class="btn-nav">CONTACT</button>
+        </center>
+    </div>
+    <div class="main">
+        <center>
+            <p class="h1c">Prakash</p>
+            <p class="h4c"></p>
+        </center>
+    </div>
+    <div class="details">
+        <h1 class="hg">Prakash</h1>
+        <p class="pg">      I am Prakash, a committed mechanical engineer, fusing technical prowess with a fervor for innovation. My meticulous approach to design and analysis ensures the efficiency and reliability of mechanical systems. Thriving on challenges, I employ a systematic problem-solving approach, reflecting my dedication to delivering cutting-edge solutions. Whether optimizing existing designs or pioneering new concepts, my engineering acumen and hands-on skills make me an invaluable asset in the dynamic realm of mechanical engineering.</p>
+        <h1 class="hg">Projects</h1>
+        <p class="pg">
+            
+            Voice-Controlled Car:
+                Integrate a voice recognition module to control the car's movements using voice commands.
+            Implement commands like "move forward," "turn left," etc.
+
+            Smartphone App-Controlled Car:
+                Create a custom mobile app to control the car via Bluetooth or Wi-Fi.
+            Include additional features like speed control, headlights, and horn.
+
+            Speed Monitoring and Control:
+                Implement a system that monitors the car's speed using sensors.
+            Include a speed control mechanism to maintain a predefined speed limit.
+        </p>   
+        <h1 class="hg">Contact Information</h1>
+        <p class="pg">
+            Phone.No    :  9524885475
+            Email            :  prakashmk2803@gmail.com
+            Linkedin      :  Prakash MK
+    
+       
+                                
+        </p> 
+     
+        <center><button onclick="downloadFile()" class="btn-nav">Download Resume</button></center>
+        <input type="button" id="btn" value="Download" />
+        </div>
+</body>
+</html>
